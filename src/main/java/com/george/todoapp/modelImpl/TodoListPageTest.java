@@ -59,10 +59,8 @@ public class TodoListPageTest extends ExecutionContext implements TodoListPage {
     public void e_TodoEdited() {
         $(By.id("subject")).clear();
         $(By.id("subject")).sendKeys(new Faker().lorem().characters(6, 15));
-
         $(By.id("description")).clear();
         $(By.id("description")).sendKeys(new Faker().lorem().sentence());
-
         $("button[type=\"submit\"]").click();
 
     }
@@ -72,8 +70,6 @@ public class TodoListPageTest extends ExecutionContext implements TodoListPage {
         fillTodoData();
         $(By.id("subject")).clear();
         $(By.id("subject")).sendKeys(new Faker().lorem().characters(6, 15));
-
-        //$("[title='Save']").click();
         $("button[type=\"submit\"]").click();
 
     }
@@ -101,9 +97,7 @@ public class TodoListPageTest extends ExecutionContext implements TodoListPage {
     public void e_EditTodoFail() {
         $(By.id("subject")).clear();
         $(By.id("subject")).sendKeys(new Faker().lorem().characters(6, 15));
-
         $(By.id("description")).clear();
-
         $("button[type=\"submit\"]").click();
 
     }
@@ -160,7 +154,6 @@ public class TodoListPageTest extends ExecutionContext implements TodoListPage {
 
     @Override
     public void e_AddTodo() {
-        //$("[title='Add New']").click();
         $(By.xpath("//a[text()='Add New']")).click();
 
     }

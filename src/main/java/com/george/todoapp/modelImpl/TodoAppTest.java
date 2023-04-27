@@ -5,8 +5,6 @@ import com.github.javafaker.Faker;
 import org.graphwalker.core.machine.ExecutionContext;
 import org.graphwalker.java.annotation.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -16,8 +14,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 @GraphWalker(value = "random(edge_coverage(100))", start = "e_StartBrowser")
 public class TodoAppTest extends ExecutionContext implements TodoApp {
-
-    //static WebDriver driver;
 
     @Override
     public void v_LoginPage() {
@@ -35,7 +31,6 @@ public class TodoAppTest extends ExecutionContext implements TodoApp {
 
     @Override
     public void e_SignUp() {
-        //$("[title='Signup']").click();
         $(By.xpath("//a[text()='Signup']")).click();
     }
 
