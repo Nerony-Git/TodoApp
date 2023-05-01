@@ -18,8 +18,9 @@
 
 <footer class="footer font-small black">
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3" style="color: white"> © 2023 Copyright:
+  <div class="footer-copyright text-center py-3" style="color: white"> &copy; 2023
     <a href="#" > <strong> TodoApp </strong></a>
+    All rights reserved.
   </div>
 </footer>
 <!-- Footer -->
